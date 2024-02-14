@@ -3,6 +3,11 @@ AWS-powered pipeline loads stock data (AAPL, AMZN, BRKA, FB, GOOG, JNJ, MA, MSFT
 
 # Financial Stock Data Pipeline Project
 
+## Problem Statement:
+
+The financial stock data for top companies (AAPL, AMZN, BRKA, FB, GOOG, JNJ, MA, MSFT, V, WMT) needs a streamlined data engineering solution. The goal is to create an end-to-end data pipeline for ingesting, transforming, and visualizing this data efficiently.
+
+
 ## Dataset Overview:
 
 This dataset contains 20 years of end-of-day stock data for the top 10 US companies by market capitalization. The companies included are AAPL, AMZN, BRKA, FB, GOOG, JNJ, MA, MSFT, V, and WMT.
@@ -32,10 +37,14 @@ Glue ETL job (redshift_load_job) transfers transformed data from S3 to Redshift.
 S3 Bucket: Create an S3 bucket to store raw and transformed data.
 AWS Glue: Set up Glue for crawling and ETL jobs.
 Athena: Configure Athena for querying data stored in S3.
-Redshift: Provision a Redshift cluster for data warehousing.
+Redshift: Provision a Redshift serverless namespace and workgroup for data warehousing.
 Python Environment: Install necessary Python libraries specified in requirements.txt.
 
 ![Data Pipeline Architecture](https://github.com/Arvind1997/financial-datawarehouse-aws/assets/13155343/58fee084-e6ba-4092-88ad-65818e6cd393)
+
+## Redshift Serverless:
+
+This project uses Redshift's serverless for data warehousing. Amazon Redshift automatically provisions and scales data warehouse capacity to deliver fast performance for demanding and unpredictable workloads. With Amazon Redshift Serverless, you use a console interface to reach a serverless data warehouse or APIs to build applications. Through the data warehouse, you can access your Amazon Redshift managed storage and your Amazon S3 data lake.
 
 
 ## Process
